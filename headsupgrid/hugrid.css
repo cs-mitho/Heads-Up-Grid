@@ -55,6 +55,9 @@
     opacity:1.0; /*opacity of row line on :hover */
 }
 
+/* Page Paddings */
+#hugrid .padding { position: absolute; border-left: 1px solid #5dff35 !important; }
+
 /* ------------------------------------------------------------------------- */
 /* Fixed Styles (No need to alter the below styles for standard grid needs.) */
 #hugrid {
