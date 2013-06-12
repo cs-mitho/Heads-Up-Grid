@@ -67,16 +67,19 @@
     document.body.appendChild(hugridDiv);
 
 	/* Padding on both sides */
-	  console.log(paddingleft);
-	if (paddingleft !== 0) {
+	try {
 	  linePaddingLeft = document.createElement("div");
 	  linePaddingLeft.className = "mline padding paddingL";
 	  hugridDiv.appendChild(linePaddingLeft);
+		$('#hugrid .paddingL').css({left: paddingleft});
+	  } catch (e) {
 	}
-	if (paddingright !== 0) {
+	try {
 	  linePaddingRight = document.createElement("div");
 	  linePaddingRight.className = "mline padding paddingR";
 	  hugridDiv.appendChild(linePaddingRight);
+		  $('#hugrid .paddingR').css({right: paddingright});
+	  } catch (e) {
 	}
 
     /* If Rows */
@@ -125,10 +128,6 @@
     $('#hugrid div.hugcol').css('width', gutterwidth + colUnits);
     $('#hugridRows').css('margin-top', pagetopmargin + 'px');
     $('#hugridRows div.hugrow').css('margin-top', (rowheight - 1) + 'px');
-
-	  /* Paddings CSS */
-	$('#hugrid .paddingL').css({left: paddingleft});
-	$('#hugrid .paddingR').css({right: paddingright});
 
     /* Create hugridUX and button */
     var hugridUX = document.createElement("div");
